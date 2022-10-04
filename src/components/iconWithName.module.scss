@@ -1,0 +1,32 @@
+.button {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(181, 124, 124);
+  // 折り返しの対応
+  overflow-wrap: break-word;
+}
+
+.iconHome {
+  // アイコンの縮小を防ぐ
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  position: relative;
+  background-size: contain;
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../images/home_black_24dp.svg");
+}
+}
