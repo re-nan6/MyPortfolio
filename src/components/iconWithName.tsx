@@ -8,7 +8,6 @@ type Props = {
 const IconWithName: React.FC<Props> = (props) => {
   let classname = ""
   let refs = ""
-  let url = ""
   if (props.name === "Home"){
     classname = "iconHome"
     refs = "home"

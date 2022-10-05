@@ -11,17 +11,25 @@ function App() {
           <div className='title'>
             PortFolio
           </div>
-          <div>
             <IconWithName name="Home"/>
-          </div>
         </div>
       </div>
     </div>
-    <div className='skills'>
+    <div className='section'>
       Skills
     </div>
-    <div>
-    <IconWithLang/>
+    <div className='skillbox'>
+    <div className='skills'>
+    <IconWithLang name="HTML"/>
+    <IconWithLang name="CSS"/>
+    <IconWithLang name="JavaScript"/>
+    <IconWithLang name="TypeScript"/>
+    <IconWithLang name="React"/>
+    <IconWithLang name="Vue"/>
+    <IconWithLang name="jQuery"/>
+    <IconWithLang name="Python"/>
+    <IconWithLang name="Java"/>
+    </div>
     </div>
     </div>
   );

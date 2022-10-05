@@ -63,9 +63,21 @@
   text-align: center;
 }
 
-.skills {
+.section {
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
   font-size: 60px;
   text-align: center;
+}
+
+.skills{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skillbox{
+  display: block;
+  margin: 0 auto;
+  width: 900px;
+  height: 200px;
 }
