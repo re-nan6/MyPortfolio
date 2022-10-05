@@ -12,25 +12,21 @@ const IconWithName: React.FC<Props> = (props) => {
   if (props.name === "Home"){
     classname = "iconHome"
     refs = "home"
-    url = "../images/home_black_24dp.svg"
   }else if (props.name === "Profile"){
     classname = "button pro"
-    refs = "home"
-    url = "../images/icon_trash_can.svg"
+    refs = "profile"
   }else if (props.name === "Works"){
     classname = "button work"
-    refs = "home"
-    url = "../images/icon_trash_can.svg"
+    refs = "works"
   }else{
     classname = "button con"
-    refs = "home"
-    url = "../images/icon_trash_can.svg"
+    refs = "contact"
   }
   return (
-    <div>
+    <div className={styles.box}>
       <a href={refs} className={styles.button}>
         <span className={styles[classname]}></span>
-        <span className={styles.s}>{props.name}</span>
+        <span className={styles.text}>{props.name}</span>
       </a>
     </div>
   );

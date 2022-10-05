@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+
+.contents-bg {
+  background-image: url(images/pc1.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+.contents {
+  background-color: rgba(0,0,0,0.6);
+  height: 120px;
+  padding: 190px 0px;
+}
+
+.contents-de {
+  text-align: center;
+  color: white;
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  color: #fff;
+  font-size: 80px;
+  text-align: center;
+}
+
+.skills {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 60px;
+  text-align: center;
+}
