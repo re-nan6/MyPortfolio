@@ -9,6 +9,10 @@ import {AiFillCode} from "react-icons/ai"
 import {FaAward} from "react-icons/fa"
 import WorkCard from './components/workCard';
 import AwardFlame from './components/awardFlame';
+import {AiFillCrown} from 'react-icons/ai'
+import PageLink from './components/pageLink';
+import {IoIosMail} from 'react-icons/io'
+import MailFlame from './components/mailFlame';
 
 function App() {
   const [selectedItem, setSelectedItem] = useState<string>('')
@@ -359,8 +363,48 @@ function App() {
     </div>
     <div className='awardbox'>
       <AwardFlame>
-        aaaaaaa
+        <div className='awardpage'>
+          <div style={{width:"100px",textAlign:"center"}}>
+            <AiFillCrown size={70} color={`black`}/>
+          </div>
+          <div>
+            <div style={{fontSize:"20px",fontWeight:"600",marginTop:"10px"}}>
+            第10回スポーツデータ解析コンペティション ポスター部門奨励賞
+            </div>
+            <div style={{marginTop:"10px"}}>
+              受賞2021年1月
+            </div>
+            <div style={{marginTop:"10px"}}>
+            【コンペの内容】
+            <div>
+            サッカーの選手情報(テーブルデータ)に対して統計的手法または機械学習手法を用いることによって幅広く有力な知見の抽出に取り組む。
+            </div>
+            <div>
+            「LightGBMを用いた各プレー場面におけるシュート予測とその要因分析」というテーマで取り組み、ポスター部門で奨励賞を獲得しました。
+            </div>
+            </div>
+            <div style={{height:"30px"}}>
+            <PageLink link="https://estat.sci.kagoshima-u.ac.jp/sports/compe10.htm">第 10 回スポーツデータ解析コンペティション</PageLink>
+            </div>
+            <div style={{height:"30px"}}>
+            <PageLink link="https://sports.ywebsys.net/news/archives/0014/">コンペ結果</PageLink>
+            </div>
+          </div>
+        </div>
       </AwardFlame>
+    </div>
+    <div className='section' style={{marginTop:"100px"}}>
+    <IoIosMail style={{position:"relative", top:"15px",left:"10px"}}size={70} color={`black`}/> Contact
+    </div>
+    <div style={{textAlign:"center"}}>
+      <MailFlame>
+      <div style={{textAlign:"center",fontSize:"30px"}}>
+      iadhoy[at]gmail.com
+      </div>
+      </MailFlame>
+      <div>
+      ※スパム避けにアットマークを[at]としています。
+      </div>
     </div>
     </div>
   );
