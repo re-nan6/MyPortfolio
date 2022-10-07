@@ -13,7 +13,7 @@ const PageLink: React.FC<Props> = ({children,link}) => {
       <FiExternalLink style={{position:"relative", top:"17px",right:"3px"}}size={15} color={`black`}/>
     </div>
     <p className={styles.linkde}>
-      <a href={link}>{children}</a>
+      <a href={link} target="_blank" rel="noopener noreferrer">{children}</a>
     </p>
     </div>
   );

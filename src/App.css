@@ -63,8 +63,9 @@
   text-align: center;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Sawarabi+Gothic');
 .section {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Sawarabi Gothic', sans-serif;
   font-weight: 300;
   font-size: 60px;
   text-align: center;
@@ -146,7 +147,7 @@
   background-color: transparent;
 }
 
-.btn {
+/* .btn {
   margin: 30px;
   border: none;
   background: transparent;
@@ -154,6 +155,27 @@
 
 .btn:hover {
   background: rgba(0,0,0,0.1);
+} */
+
+.btn {
+  margin: 29px;
+  background-color: #ffffff;
+  color: #000000;
+  border: #000000 solid 2px;
+  border-bottom: 8px solid #000000;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+
+/* マウスオーバー時 */
+.btn:hover{
+  border-bottom: none;
+  transform: translateY(5px);
+  border: #000000 solid 2px;
+  cursor: pointer;
 }
 
 .skillcard {
@@ -222,7 +244,7 @@
   display: flex;
   margin: 0 auto;
   width: 900px;
-  height: 200px;
+  height: 375px;
 }
 
 .worksbox {
@@ -251,4 +273,68 @@
 
 .awardpage {
   display: flex;
+}
+
+.footer {
+  height: 100px;
+  background-color: #282c34;
+  text-align: center;
+  position: relative
+}
+
+.footerbox {
+  color:#fff;
+  font-size: 15px;
+  margin:auto 0;	/*上下をautoにします*/
+	height:40px;	/*高さは必須*/
+	position: absolute;	/*top,bottomが0の時左右の中央揃えになります*/
+	top:0;
+	bottom:0;
+  left:0;
+	right:0;
+}
+
+.content-work-base {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  margin: 0 auto;
+  border: 0;
+  outline: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 0%;
+  width: 0%;
+  background-color: transparent;
+  transition-property: background-color, width, height;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in-out;
+}
+
+.content-work-after {
+  width: 1350px;
+  height: 900px;
+  background-color: white;
+}
+
+.content-work-before {
+  width: 600px;
+  height: 300px;
+  background-color: transparent;
+}
+
+.workpic {
+  width: 900px;
+}
+
+.workde {
+  width: 400px;
+}
+
+.workimg {
+  height: 600px;
+  width: 900px;
 }
