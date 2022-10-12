@@ -80,7 +80,7 @@
   display: block;
   margin: 0 auto;
   width: 900px;
-  height: 700px;
+  height: 900px;
 }
 
 .is_modal {
@@ -162,12 +162,12 @@
   background-color: #ffffff;
   color: #000000;
   border: #000000 solid 2px;
-  border-bottom: 8px solid #000000;
+  /* border-bottom: 8px solid #000000; */
   border-radius: 5px;
-  -webkit-box-sizing: border-box;
+  /* -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  transition: 0.2s;
+  transition: 0.2s; */
 }
 
 /* マウスオーバー時 */
@@ -183,16 +183,17 @@
 }
 
 .skillpic {
-  width: 30%;
+  width: 150px;
+  margin:10px;
 }
 
 .skillde {
-  width: 70%;
+  width: 370px;
+  margin:10px;
 }
 
 .skillfont {
   font-weight: 800;
-  margin:10px;
 }
 
 .star5_rating{

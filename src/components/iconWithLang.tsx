@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './iconWithLang.module.scss';
 import {IoLogoHtml5, IoLogoCss3} from "react-icons/io";
 import {IoLogoVue, IoLogoPython} from "react-icons/io5"
-import {SiJavascript, SiTypescript, SiReact, SiJquery, SiJava, SiPhp, SiFirebase} from "react-icons/si"
+import {SiJavascript, SiTypescript, SiReact, SiJquery, SiJava, SiPhp, SiFirebase, SiFlask, SiFastapi} from "react-icons/si"
 import {FaGitAlt} from "react-icons/fa"
 type Props = {
     langName:string
@@ -22,6 +22,8 @@ const IconWithLang: React.FC<Props> = ({langName}) => {
         { langName==="Vue" && <IoLogoVue size={130} color={'#ccc'} />}
         { langName==="jQuery" && <SiJquery size={130} color={'#ccc'} />}
         { langName==="Python" && <IoLogoPython size={130} color={'#ccc'} />}
+        { langName==="Flask" && <SiFlask size={130} color={'#ccc'} />}
+        { langName==="FastAPI" && <SiFastapi size={130} color={'#ccc'} />}
         { langName==="Java" && <SiJava size={130} color={'#ccc'} />}
         { langName==="PHP" && <SiPhp size={130} color={'#ccc'} />}
         { langName==="Git" && <FaGitAlt size={130} color={'#ccc'} />}

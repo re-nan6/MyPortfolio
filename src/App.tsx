@@ -3,7 +3,6 @@ import IconWithName from './components/iconWithName';
 import IconWithLang from './components/iconWithLang';
 import { useState, useEffect } from "react";
 import ReactModal from 'react-modal';
-import {IoLogoHtml5, IoLogoCss3} from "react-icons/io";
 import {FaUser} from "react-icons/fa"
 import {AiFillCode} from "react-icons/ai"
 import {FaAward} from "react-icons/fa"
@@ -114,11 +113,11 @@ function App() {
     <AiFillCode style={{position:"relative", top:"15px",right:"10px"}}size={70} color={`black`}/>SKILLS
     <div className='skillbox'>
     <div className='skills'>
-    <button className="btn" onClick={() => onOpenDialog("modal1")}>
+    <button className="btn" onClick={() => onOpenDialog("HTML")}>
     <IconWithLang langName="HTML"/>
     </button>
     <ReactModal
-        isOpen={selectedItem === "modal1"}
+        isOpen={selectedItem === "HTML"}
         onRequestClose={() => setSelectedItem('')}
         overlayClassName={{
           base: "overlay-base",
@@ -146,11 +145,11 @@ function App() {
           </div>
           </div>
     </ReactModal>
-    <button className="btn" onClick={() => onOpenDialog("modal2")}>
+    <button className="btn" onClick={() => onOpenDialog("CSS")}>
     <IconWithLang langName="CSS"/>
     </button>
     <ReactModal
-        isOpen={selectedItem === "modal2"}
+        isOpen={selectedItem === "CSS"}
         onRequestClose={() => setSelectedItem('')}
         overlayClassName={{
           base: "overlay-base",
@@ -166,7 +165,7 @@ function App() {
         >
           <div className='skillcard'>
           <div className='skillpic'>
-          <IconWithLang langName="HTML"/>
+          <IconWithLang langName="CSS"/>
           </div>
           <div className='skillde'>
           <div className='skillfont'>経験年数</div>
@@ -178,11 +177,11 @@ function App() {
           </div>
           </div>
     </ReactModal>
-    <button className="btn" onClick={() => onOpenDialog("modal3")}>
+    <button className="btn" onClick={() => onOpenDialog("JavaScript")}>
     <IconWithLang langName="JavaScript"/>
     </button>
     <ReactModal
-        isOpen={selectedItem === "modal3"}
+        isOpen={selectedItem === "JavaScript"}
         onRequestClose={() => setSelectedItem('')}
         overlayClassName={{
           base: "overlay-base",
@@ -198,7 +197,7 @@ function App() {
         >
           <div className='skillcard'>
           <div className='skillpic'>
-          <IconWithLang langName="HTML"/>
+          <IconWithLang langName="JavaScript"/>
           </div>
           <div className='skillde'>
           <div className='skillfont'>経験年数</div>
@@ -206,15 +205,15 @@ function App() {
           <div className='skillfont'>習熟度</div>
           <span className="star5_rating" data-rate="4"></span>
           <div className='skillfont'>備考</div>
-          ドキュメントを参照すれば大抵のことは出来ます
+          インターンでの開発や卒業研究の際に使用しました<br/>
           </div>
           </div>
     </ReactModal>
-    <button className="btn" onClick={() => onOpenDialog("modal4")}>
+    <button className="btn" onClick={() => onOpenDialog("TypeScript")}>
     <IconWithLang langName="TypeScript"/>
     </button>
     <ReactModal
-        isOpen={selectedItem === "modal4"}
+        isOpen={selectedItem === "TypeScript"}
         onRequestClose={() => setSelectedItem('')}
         overlayClassName={{
           base: "overlay-base",
@@ -230,23 +229,24 @@ function App() {
         >
           <div className='skillcard'>
           <div className='skillpic'>
-          <IconWithLang langName="HTML"/>
+          <IconWithLang langName="TypeScript"/>
           </div>
           <div className='skillde'>
           <div className='skillfont'>経験年数</div>
-          1年
+          半年
           <div className='skillfont'>習熟度</div>
           <span className="star5_rating" data-rate="4"></span>
           <div className='skillfont'>備考</div>
-          ドキュメントを参照すれば大抵のことは出来ます
+          インターンでの開発の際に使用しました<br/>
+          このサイトでも使用しています
           </div>
           </div>
     </ReactModal>
-    <button className="btn" onClick={() => onOpenDialog("modal5")}>
+    <button className="btn" onClick={() => onOpenDialog("React")}>
     <IconWithLang langName="React"/>
     </button>
     <ReactModal
-        isOpen={selectedItem === "modal5"}
+        isOpen={selectedItem === "React"}
         onRequestClose={() => setSelectedItem('')}
         overlayClassName={{
           base: "overlay-base",
@@ -262,23 +262,24 @@ function App() {
         >
           <div className='skillcard'>
           <div className='skillpic'>
-          <IconWithLang langName="HTML"/>
+          <IconWithLang langName="React"/>
           </div>
           <div className='skillde'>
           <div className='skillfont'>経験年数</div>
-          1年
+          半年
           <div className='skillfont'>習熟度</div>
-          <span className="star5_rating" data-rate="4"></span>
+          <span className="star5_rating" data-rate="3"></span>
           <div className='skillfont'>備考</div>
-          ドキュメントを参照すれば大抵のことは出来ます
+          インターンでの開発の際に使用しました<br/>
+          このサイトでもReactを使用しています
           </div>
           </div>
     </ReactModal>
-    <button className="btn" onClick={() => onOpenDialog("modal6")}>
+    <button className="btn" onClick={() => onOpenDialog("Vue")}>
     <IconWithLang langName="Vue"/>
     </button>
     <ReactModal
-        isOpen={selectedItem === "modal6"}
+        isOpen={selectedItem === "Vue"}
         onRequestClose={() => setSelectedItem('')}
         overlayClassName={{
           base: "overlay-base",
@@ -294,23 +295,23 @@ function App() {
         >
           <div className='skillcard'>
           <div className='skillpic'>
-          <IconWithLang langName="HTML"/>
+          <IconWithLang langName="Vue"/>
           </div>
           <div className='skillde'>
           <div className='skillfont'>経験年数</div>
-          1年
+          半年
           <div className='skillfont'>習熟度</div>
-          <span className="star5_rating" data-rate="4"></span>
+          <span className="star5_rating" data-rate="3"></span>
           <div className='skillfont'>備考</div>
-          ドキュメントを参照すれば大抵のことは出来ます
+          インターンでの開発の際に使用しました
           </div>
           </div>
     </ReactModal>
-    <button className="btn" onClick={() => onOpenDialog("modal7")}>
+    <button className="btn" onClick={() => onOpenDialog("jQuery")}>
     <IconWithLang langName="jQuery"/>
     </button>
     <ReactModal
-        isOpen={selectedItem === "modal7"}
+        isOpen={selectedItem === "jQuery"}
         onRequestClose={() => setSelectedItem('')}
         overlayClassName={{
           base: "overlay-base",
@@ -326,23 +327,23 @@ function App() {
         >
           <div className='skillcard'>
           <div className='skillpic'>
-          <IconWithLang langName="HTML"/>
+          <IconWithLang langName="jQuery"/>
           </div>
           <div className='skillde'>
           <div className='skillfont'>経験年数</div>
-          1年
+          半年
           <div className='skillfont'>習熟度</div>
-          <span className="star5_rating" data-rate="4"></span>
+          <span className="star5_rating" data-rate="3"></span>
           <div className='skillfont'>備考</div>
-          ドキュメントを参照すれば大抵のことは出来ます
+          インターンでの開発の際に使用しました
           </div>
           </div>
     </ReactModal>
-    <button className="btn" onClick={() => onOpenDialog("modal8")}>
+    <button className="btn" onClick={() => onOpenDialog("Python")}>
     <IconWithLang langName="Python"/>
     </button>
     <ReactModal
-        isOpen={selectedItem === "modal8"}
+        isOpen={selectedItem === "Python"}
         onRequestClose={() => setSelectedItem('')}
         overlayClassName={{
           base: "overlay-base",
@@ -358,23 +359,24 @@ function App() {
         >
           <div className='skillcard'>
           <div className='skillpic'>
-          <IconWithLang langName="HTML"/>
+          <IconWithLang langName="Python"/>
           </div>
           <div className='skillde'>
           <div className='skillfont'>経験年数</div>
-          1年
+          5年
           <div className='skillfont'>習熟度</div>
-          <span className="star5_rating" data-rate="4"></span>
+          <span className="star5_rating" data-rate="4.5"></span>
           <div className='skillfont'>備考</div>
-          ドキュメントを参照すれば大抵のことは出来ます
+          卒業研究やKaggleにてデータ分析・機械学習を行っていました<br/>
+          AtCoder等の競技プログラミングでも使用しています
           </div>
           </div>
     </ReactModal>
-    <button className="btn" onClick={() => onOpenDialog("modal9")}>
-    <IconWithLang langName="Java"/>
+    <button className="btn" onClick={() => onOpenDialog("Flask")}>
+    <IconWithLang langName="Flask"/>
     </button>
     <ReactModal
-        isOpen={selectedItem === "modal9"}
+        isOpen={selectedItem === "Flask"}
         onRequestClose={() => setSelectedItem('')}
         overlayClassName={{
           base: "overlay-base",
@@ -390,15 +392,79 @@ function App() {
         >
           <div className='skillcard'>
           <div className='skillpic'>
-          <IconWithLang langName="HTML"/>
+          <IconWithLang langName="Flask"/>
           </div>
           <div className='skillde'>
           <div className='skillfont'>経験年数</div>
-          1年
+          2か月
           <div className='skillfont'>習熟度</div>
-          <span className="star5_rating" data-rate="4"></span>
+          <span className="star5_rating" data-rate="3"></span>
           <div className='skillfont'>備考</div>
-          ドキュメントを参照すれば大抵のことは出来ます
+          大学の授業にてレコメンドサービスの開発を行いました
+          </div>
+          </div>
+    </ReactModal>
+    <button className="btn" onClick={() => onOpenDialog("Fastapi")}>
+    <IconWithLang langName="FastAPI"/>
+    </button>
+    <ReactModal
+        isOpen={selectedItem === "Fastapi"}
+        onRequestClose={() => setSelectedItem('')}
+        overlayClassName={{
+          base: "overlay-base",
+          afterOpen: "overlay-after",
+          beforeClose: "overlay-before"
+        }}
+        className={{
+          base: "content-base",
+          afterOpen: "content-after",
+          beforeClose: "content-before"
+        }}
+        closeTimeoutMS={400}
+        >
+          <div className='skillcard'>
+          <div className='skillpic'>
+          <IconWithLang langName="FastAPI"/>
+          </div>
+          <div className='skillde'>
+          <div className='skillfont'>経験年数</div>
+          2か月
+          <div className='skillfont'>習熟度</div>
+          <span className="star5_rating" data-rate="3"></span>
+          <div className='skillfont'>備考</div>
+          趣味でレコメンドサービスの開発を行いました
+          </div>
+          </div>
+    </ReactModal>
+    <button className="btn" onClick={() => onOpenDialog("Java")}>
+    <IconWithLang langName="Java"/>
+    </button>
+    <ReactModal
+        isOpen={selectedItem === "Java"}
+        onRequestClose={() => setSelectedItem('')}
+        overlayClassName={{
+          base: "overlay-base",
+          afterOpen: "overlay-after",
+          beforeClose: "overlay-before"
+        }}
+        className={{
+          base: "content-base",
+          afterOpen: "content-after",
+          beforeClose: "content-before"
+        }}
+        closeTimeoutMS={400}
+        >
+          <div className='skillcard'>
+          <div className='skillpic'>
+          <IconWithLang langName="Java"/>
+          </div>
+          <div className='skillde'>
+          <div className='skillfont'>経験年数</div>
+          2年
+          <div className='skillfont'>習熟度</div>
+          <span className="star5_rating" data-rate="2"></span>
+          <div className='skillfont'>備考</div>
+          大学の授業にてチャットシステムの開発を行いました
           </div>
           </div>
     </ReactModal>
@@ -422,15 +488,15 @@ function App() {
         >
           <div className='skillcard'>
           <div className='skillpic'>
-          <IconWithLang langName="HTML"/>
+          <IconWithLang langName="PHP"/>
           </div>
           <div className='skillde'>
           <div className='skillfont'>経験年数</div>
           1年
           <div className='skillfont'>習熟度</div>
-          <span className="star5_rating" data-rate="4"></span>
+          <span className="star5_rating" data-rate="2"></span>
           <div className='skillfont'>備考</div>
-          ドキュメントを参照すれば大抵のことは出来ます
+          大学の授業にてショッピングサイトの開発を行いました
           </div>
           </div>
     </ReactModal>
@@ -454,15 +520,15 @@ function App() {
         >
           <div className='skillcard'>
           <div className='skillpic'>
-          <IconWithLang langName="HTML"/>
+          <IconWithLang langName="Git"/>
           </div>
           <div className='skillde'>
           <div className='skillfont'>経験年数</div>
-          1年
+          2年
           <div className='skillfont'>習熟度</div>
-          <span className="star5_rating" data-rate="4"></span>
+          <span className="star5_rating" data-rate="3.5"></span>
           <div className='skillfont'>備考</div>
-          ドキュメントを参照すれば大抵のことは出来ます
+          基本的なことはできます
           </div>
           </div>
     </ReactModal>
@@ -486,15 +552,15 @@ function App() {
         >
           <div className='skillcard'>
           <div className='skillpic'>
-          <IconWithLang langName="HTML"/>
+          <IconWithLang langName="Firebase"/>
           </div>
           <div className='skillde'>
           <div className='skillfont'>経験年数</div>
-          1年
+          一か月
           <div className='skillfont'>習熟度</div>
-          <span className="star5_rating" data-rate="4"></span>
+          <span className="star5_rating" data-rate="2.5"></span>
           <div className='skillfont'>備考</div>
-          ドキュメントを参照すれば大抵のことは出来ます
+          インターンの開発にて使用しました
           </div>
           </div>
     </ReactModal>
