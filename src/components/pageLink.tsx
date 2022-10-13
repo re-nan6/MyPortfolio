@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './pageLink.module.scss';
 import {FiExternalLink} from 'react-icons/fi'
+
 type Props = {
   children:React.ReactNode,
   link:string,

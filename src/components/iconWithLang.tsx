@@ -4,10 +4,9 @@ import {IoLogoHtml5, IoLogoCss3} from "react-icons/io";
 import {IoLogoVue, IoLogoPython} from "react-icons/io5"
 import {SiJavascript, SiTypescript, SiReact, SiJquery, SiJava, SiPhp, SiFirebase, SiFlask, SiFastapi} from "react-icons/si"
 import {FaGitAlt} from "react-icons/fa"
+
 type Props = {
     langName:string
-    // modalBtnName: string;
-    // modalClick: void;
 }
 
 const IconWithLang: React.FC<Props> = ({langName}) => {

@@ -18,11 +18,11 @@
   text-decoration: none;
   &:hover{
     background: rgba(0,0,0,0.1);
+    cursor: pointer;
   }
 }
 
 .text{
-  // width: 50px;
   flex-shrink: 0;
   font-size: 30px;
   margin-left: 10px;
