@@ -11,6 +11,8 @@ import IconWithLang from './components/iconWithLang';
 import MailFlame from './components/mailFlame';
 import PageLink from './components/pageLink';
 import WorkCard from './components/workCard';
+import SkillModal from './components/skillModal';
+import SkillCard from './components/skillCard';
 
 function App() {
   const [selectedItem, setSelectedItem] = useState<string>('')
@@ -115,463 +117,106 @@ function App() {
             <button className="btn" onClick={() => onOpenDialog("HTML")}>
               <IconWithLang langName="HTML"/>
             </button>
-            <ReactModal
-                isOpen={selectedItem === "HTML"}
-                onRequestClose={() => setSelectedItem('')}
-                overlayClassName={{
-                  base: "overlay-base",
-                  afterOpen: "overlay-after",
-                  beforeClose: "overlay-before"
-                }}
-                className={{
-                  base: "content-base",
-                  afterOpen: "content-after",
-                  beforeClose: "content-before"
-                }}
-                closeTimeoutMS={400}
-                >
-                  <div className='skillcard'>
-                    <div className='skillpic'>
-                      <IconWithLang langName="HTML"/>
-                    </div>
-                    <div className='skillde'>
-                      <div className='skillfont'>経験年数</div>
-                      1年
-                      <div className='skillfont'>習熟度</div>
-                      <span className="star5_rating" data-rate="4"></span>
-                      <div className='skillfont'>備考</div>
-                      ドキュメントを参照すれば大抵のことは出来ます
-                    </div>
-                  </div>
-            </ReactModal>
+            <SkillModal selectedItem={selectedItem} lang="HTML" setSelectedItem={setSelectedItem} >
+              <SkillCard langName="HTML" years="1年" star="4" remark="ドキュメントを参照すれば大抵のことは出来ます"/>
+            </SkillModal>
+
             <button className="btn" onClick={() => onOpenDialog("CSS")}>
-            <IconWithLang langName="CSS"/>
+              <IconWithLang langName="CSS"/>
             </button>
-            <ReactModal
-                isOpen={selectedItem === "CSS"}
-                onRequestClose={() => setSelectedItem('')}
-                overlayClassName={{
-                  base: "overlay-base",
-                  afterOpen: "overlay-after",
-                  beforeClose: "overlay-before"
-                }}
-                className={{
-                  base: "content-base",
-                  afterOpen: "content-after",
-                  beforeClose: "content-before"
-                }}
-                closeTimeoutMS={400}
-                >
-                  <div className='skillcard'>
-                    <div className='skillpic'>
-                      <IconWithLang langName="CSS"/>
-                    </div>
-                    <div className='skillde'>
-                      <div className='skillfont'>経験年数</div>
-                      1年
-                      <div className='skillfont'>習熟度</div>
-                      <span className="star5_rating" data-rate="4"></span>
-                      <div className='skillfont'>備考</div>
-                      ドキュメントを参照すれば大抵のことは出来ます
-                    </div>
-                  </div>
-            </ReactModal>
+            <SkillModal selectedItem={selectedItem} lang="CSS" setSelectedItem={setSelectedItem} >
+              <SkillCard langName="CSS" years="1年" star="4" remark="ドキュメントを参照すれば大抵のことは出来ます"/>
+            </SkillModal>
+
             <button className="btn" onClick={() => onOpenDialog("JavaScript")}>
-            <IconWithLang langName="JavaScript"/>
+              <IconWithLang langName="JavaScript"/>
             </button>
-            <ReactModal
-                isOpen={selectedItem === "JavaScript"}
-                onRequestClose={() => setSelectedItem('')}
-                overlayClassName={{
-                  base: "overlay-base",
-                  afterOpen: "overlay-after",
-                  beforeClose: "overlay-before"
-                }}
-                className={{
-                  base: "content-base",
-                  afterOpen: "content-after",
-                  beforeClose: "content-before"
-                }}
-                closeTimeoutMS={400}
-                >
-                  <div className='skillcard'>
-                    <div className='skillpic'>
-                      <IconWithLang langName="JavaScript"/>
-                    </div>
-                    <div className='skillde'>
-                      <div className='skillfont'>経験年数</div>
-                      1年
-                      <div className='skillfont'>習熟度</div>
-                      <span className="star5_rating" data-rate="4"></span>
-                      <div className='skillfont'>備考</div>
-                      インターンでの開発や卒業研究の際に使用しました<br/>
-                    </div>
-                  </div>
-            </ReactModal>
+            <SkillModal selectedItem={selectedItem} lang="JavaScript" setSelectedItem={setSelectedItem} >
+              <SkillCard langName="JavaScript" years="1年" star="4" remark="インターンでの開発や卒業研究の際に使用しました"/>
+            </SkillModal>
+
             <button className="btn" onClick={() => onOpenDialog("TypeScript")}>
-            <IconWithLang langName="TypeScript"/>
+              <IconWithLang langName="TypeScript"/>
             </button>
-            <ReactModal
-                isOpen={selectedItem === "TypeScript"}
-                onRequestClose={() => setSelectedItem('')}
-                overlayClassName={{
-                  base: "overlay-base",
-                  afterOpen: "overlay-after",
-                  beforeClose: "overlay-before"
-                }}
-                className={{
-                  base: "content-base",
-                  afterOpen: "content-after",
-                  beforeClose: "content-before"
-                }}
-                closeTimeoutMS={400}
-                >
-                  <div className='skillcard'>
-                    <div className='skillpic'>
-                      <IconWithLang langName="TypeScript"/>
-                    </div>
-                    <div className='skillde'>
-                      <div className='skillfont'>経験年数</div>
-                      半年
-                      <div className='skillfont'>習熟度</div>
-                      <span className="star5_rating" data-rate="4"></span>
-                      <div className='skillfont'>備考</div>
-                      インターンでの開発の際に使用しました<br/>
-                      このサイトでも使用しています
-                    </div>
-                  </div>
-            </ReactModal>
+            <SkillModal selectedItem={selectedItem} lang="TypeScript" setSelectedItem={setSelectedItem} >
+              <SkillCard langName="TypeScript" years="半年" star="4" remark="インターンでの開発の際に使用しました。このサイトでも使用しています"/>
+            </SkillModal>
+
             <button className="btn" onClick={() => onOpenDialog("Java")}>
-            <IconWithLang langName="Java"/>
+              <IconWithLang langName="Java"/>
             </button>
-            <ReactModal
-                isOpen={selectedItem === "Java"}
-                onRequestClose={() => setSelectedItem('')}
-                overlayClassName={{
-                  base: "overlay-base",
-                  afterOpen: "overlay-after",
-                  beforeClose: "overlay-before"
-                }}
-                className={{
-                  base: "content-base",
-                  afterOpen: "content-after",
-                  beforeClose: "content-before"
-                }}
-                closeTimeoutMS={400}
-                >
-                  <div className='skillcard'>
-                  <div className='skillpic'>
-                  <IconWithLang langName="Java"/>
-                  </div>
-                  <div className='skillde'>
-                  <div className='skillfont'>経験年数</div>
-                  2年
-                  <div className='skillfont'>習熟度</div>
-                  <span className="star5_rating" data-rate="2"></span>
-                  <div className='skillfont'>備考</div>
-                  大学の授業にてチャットシステムの開発を行いました
-                  </div>
-                  </div>
-            </ReactModal>
-            <button className="btn" onClick={() => onOpenDialog("php")}>
-            <IconWithLang langName="PHP"/>
+            <SkillModal selectedItem={selectedItem} lang="Java" setSelectedItem={setSelectedItem} >
+              <SkillCard langName="Java" years="2年" star="2" remark="大学の授業にてチャットシステムの開発を行いました"/>
+            </SkillModal>
+
+            <button className="btn" onClick={() => onOpenDialog("PHP")}>
+              <IconWithLang langName="PHP"/>
             </button>
-            <ReactModal
-                isOpen={selectedItem === "php"}
-                onRequestClose={() => setSelectedItem('')}
-                overlayClassName={{
-                  base: "overlay-base",
-                  afterOpen: "overlay-after",
-                  beforeClose: "overlay-before"
-                }}
-                className={{
-                  base: "content-base",
-                  afterOpen: "content-after",
-                  beforeClose: "content-before"
-                }}
-                closeTimeoutMS={400}
-                >
-                  <div className='skillcard'>
-                    <div className='skillpic'>
-                      <IconWithLang langName="PHP"/>
-                    </div>
-                    <div className='skillde'>
-                      <div className='skillfont'>経験年数</div>
-                      1年
-                      <div className='skillfont'>習熟度</div>
-                      <span className="star5_rating" data-rate="2"></span>
-                      <div className='skillfont'>備考</div>
-                      大学の授業にてショッピングサイトの開発を行いました
-                    </div>
-                  </div>
-            </ReactModal>
+            <SkillModal selectedItem={selectedItem} lang="PHP" setSelectedItem={setSelectedItem} >
+              <SkillCard langName="PHP" years="1年" star="2" remark="大学の授業にてショッピングサイトの開発を行いました"/>
+            </SkillModal>
+
             <button className="btn" onClick={() => onOpenDialog("Python")}>
-            <IconWithLang langName="Python"/>
+              <IconWithLang langName="Python"/>
             </button>
-            <ReactModal
-                isOpen={selectedItem === "Python"}
-                onRequestClose={() => setSelectedItem('')}
-                overlayClassName={{
-                  base: "overlay-base",
-                  afterOpen: "overlay-after",
-                  beforeClose: "overlay-before"
-                }}
-                className={{
-                  base: "content-base",
-                  afterOpen: "content-after",
-                  beforeClose: "content-before"
-                }}
-                closeTimeoutMS={400}
-                >
-                  <div className='skillcard'>
-                    <div className='skillpic'>
-                      <IconWithLang langName="Python"/>
-                    </div>
-                    <div className='skillde'>
-                      <div className='skillfont'>経験年数</div>
-                      5年
-                      <div className='skillfont'>習熟度</div>
-                      <span className="star5_rating" data-rate="4.5"></span>
-                      <div className='skillfont'>備考</div>
-                      卒業研究やKaggleにてデータ分析・機械学習を行っていました<br/>
-                      AtCoder等の競技プログラミングでも使用しています
-                    </div>
-                  </div>
-            </ReactModal>
+            <SkillModal selectedItem={selectedItem} lang="Python" setSelectedItem={setSelectedItem} >
+              <SkillCard langName="Python" years="5年" star="4.5" remark="卒業研究やKaggleにてデータ分析・機械学習を行っていました。AtCoder等の競技プログラミングでも使用しています"/>
+            </SkillModal>
             </div>
             <div className='midashi'><span>フレームワーク</span></div>
             <div className='skills'>
               <button className="btn" onClick={() => onOpenDialog("React")}>
               <IconWithLang langName="React"/>
               </button>
-              <ReactModal
-                  isOpen={selectedItem === "React"}
-                  onRequestClose={() => setSelectedItem('')}
-                  overlayClassName={{
-                    base: "overlay-base",
-                    afterOpen: "overlay-after",
-                    beforeClose: "overlay-before"
-                  }}
-                  className={{
-                    base: "content-base",
-                    afterOpen: "content-after",
-                    beforeClose: "content-before"
-                  }}
-                  closeTimeoutMS={400}
-                  >
-                    <div className='skillcard'>
-                      <div className='skillpic'>
-                        <IconWithLang langName="React"/>
-                      </div>
-                      <div className='skillde'>
-                        <div className='skillfont'>経験年数</div>
-                        半年
-                        <div className='skillfont'>習熟度</div>
-                        <span className="star5_rating" data-rate="3"></span>
-                        <div className='skillfont'>備考</div>
-                        インターンでの開発の際に使用しました<br/>
-                        このサイトでもReactを使用しています
-                      </div>
-                    </div>
-              </ReactModal>
+              <SkillModal selectedItem={selectedItem} lang="React" setSelectedItem={setSelectedItem} >
+                <SkillCard langName="React" years="半年" star="3" remark="インターンでの開発の際に使用しました。このサイトでもReactを使用しています"/>
+              </SkillModal>
+
               <button className="btn" onClick={() => onOpenDialog("Vue")}>
               <IconWithLang langName="Vue"/>
               </button>
-              <ReactModal
-                  isOpen={selectedItem === "Vue"}
-                  onRequestClose={() => setSelectedItem('')}
-                  overlayClassName={{
-                    base: "overlay-base",
-                    afterOpen: "overlay-after",
-                    beforeClose: "overlay-before"
-                  }}
-                  className={{
-                    base: "content-base",
-                    afterOpen: "content-after",
-                    beforeClose: "content-before"
-                  }}
-                  closeTimeoutMS={400}
-                  >
-                    <div className='skillcard'>
-                      <div className='skillpic'>
-                        <IconWithLang langName="Vue"/>
-                      </div>
-                      <div className='skillde'>
-                        <div className='skillfont'>経験年数</div>
-                        半年
-                        <div className='skillfont'>習熟度</div>
-                        <span className="star5_rating" data-rate="3"></span>
-                        <div className='skillfont'>備考</div>
-                        インターンでの開発の際に使用しました
-                      </div>
-                    </div>
-              </ReactModal>
+              <SkillModal selectedItem={selectedItem} lang="Vue" setSelectedItem={setSelectedItem} >
+                <SkillCard langName="Vue" years="半年" star="3" remark="インターンでの開発の際に使用しました"/>
+              </SkillModal>
+
               <button className="btn" onClick={() => onOpenDialog("jQuery")}>
-              <IconWithLang langName="jQuery"/>
+                <IconWithLang langName="jQuery"/>
               </button>
-              <ReactModal
-                  isOpen={selectedItem === "jQuery"}
-                  onRequestClose={() => setSelectedItem('')}
-                  overlayClassName={{
-                    base: "overlay-base",
-                    afterOpen: "overlay-after",
-                    beforeClose: "overlay-before"
-                  }}
-                  className={{
-                    base: "content-base",
-                    afterOpen: "content-after",
-                    beforeClose: "content-before"
-                  }}
-                  closeTimeoutMS={400}
-                  >
-                    <div className='skillcard'>
-                      <div className='skillpic'>
-                        <IconWithLang langName="jQuery"/>
-                      </div>
-                      <div className='skillde'>
-                        <div className='skillfont'>経験年数</div>
-                        半年
-                        <div className='skillfont'>習熟度</div>
-                        <span className="star5_rating" data-rate="3"></span>
-                        <div className='skillfont'>備考</div>
-                        インターンでの開発の際に使用しました
-                      </div>
-                    </div>
-              </ReactModal>
+              <SkillModal selectedItem={selectedItem} lang="jQuery" setSelectedItem={setSelectedItem} >
+                <SkillCard langName="jQuery" years="半年" star="3" remark="インターンでの開発の際に使用しました"/>
+              </SkillModal>
+
               <button className="btn" onClick={() => onOpenDialog("Flask")}>
-              <IconWithLang langName="Flask"/>
+                <IconWithLang langName="Flask"/>
               </button>
-              <ReactModal
-                  isOpen={selectedItem === "Flask"}
-                  onRequestClose={() => setSelectedItem('')}
-                  overlayClassName={{
-                    base: "overlay-base",
-                    afterOpen: "overlay-after",
-                    beforeClose: "overlay-before"
-                  }}
-                  className={{
-                    base: "content-base",
-                    afterOpen: "content-after",
-                    beforeClose: "content-before"
-                  }}
-                  closeTimeoutMS={400}
-                  >
-                    <div className='skillcard'>
-                      <div className='skillpic'>
-                        <IconWithLang langName="Flask"/>
-                      </div>
-                      <div className='skillde'>
-                        <div className='skillfont'>経験年数</div>
-                        2か月
-                        <div className='skillfont'>習熟度</div>
-                        <span className="star5_rating" data-rate="3"></span>
-                        <div className='skillfont'>備考</div>
-                        大学の授業にてレコメンドサービスの開発を行いました
-                      </div>
-                    </div>
-              </ReactModal>
-              <button className="btn" onClick={() => onOpenDialog("Fastapi")}>
-              <IconWithLang langName="FastAPI"/>
+              <SkillModal selectedItem={selectedItem} lang="Flask" setSelectedItem={setSelectedItem} >
+                <SkillCard langName="Flask" years="2か月" star="3" remark="大学の授業にてレコメンドサービスの開発を行いました"/>
+              </SkillModal>
+
+              <button className="btn" onClick={() => onOpenDialog("FastAPI")}>
+                <IconWithLang langName="FastAPI"/>
               </button>
-              <ReactModal
-                  isOpen={selectedItem === "Fastapi"}
-                  onRequestClose={() => setSelectedItem('')}
-                  overlayClassName={{
-                    base: "overlay-base",
-                    afterOpen: "overlay-after",
-                    beforeClose: "overlay-before"
-                  }}
-                  className={{
-                    base: "content-base",
-                    afterOpen: "content-after",
-                    beforeClose: "content-before"
-                  }}
-                  closeTimeoutMS={400}
-                  >
-                    <div className='skillcard'>
-                      <div className='skillpic'>
-                        <IconWithLang langName="FastAPI"/>
-                      </div>
-                      <div className='skillde'>
-                        <div className='skillfont'>経験年数</div>
-                        2か月
-                        <div className='skillfont'>習熟度</div>
-                        <span className="star5_rating" data-rate="3"></span>
-                        <div className='skillfont'>備考</div>
-                        趣味でレコメンドサービスの開発を行いました
-                      </div>
-                    </div>
-              </ReactModal>
+              <SkillModal selectedItem={selectedItem} lang="FastAPI" setSelectedItem={setSelectedItem} >
+                <SkillCard langName="FastAPI" years="2か月" star="3" remark="趣味でレコメンドサービスの開発を行いました"/>
+              </SkillModal>
             </div>
             <div className='midashi'><span>開発支援ツール</span></div>
             <div className='skills'>
-              <button className="btn" onClick={() => onOpenDialog("git")}>
-              <IconWithLang langName="Git"/>
+              <button className="btn" onClick={() => onOpenDialog("Git")}>
+                <IconWithLang langName="Git"/>
               </button>
-              <ReactModal
-                  isOpen={selectedItem === "git"}
-                  onRequestClose={() => setSelectedItem('')}
-                  overlayClassName={{
-                    base: "overlay-base",
-                    afterOpen: "overlay-after",
-                    beforeClose: "overlay-before"
-                  }}
-                  className={{
-                    base: "content-base",
-                    afterOpen: "content-after",
-                    beforeClose: "content-before"
-                  }}
-                  closeTimeoutMS={400}
-                  >
-                    <div className='skillcard'>
-                      <div className='skillpic'>
-                        <IconWithLang langName="Git"/>
-                      </div>
-                      <div className='skillde'>
-                        <div className='skillfont'>経験年数</div>
-                        2年
-                        <div className='skillfont'>習熟度</div>
-                        <span className="star5_rating" data-rate="3.5"></span>
-                        <div className='skillfont'>備考</div>
-                        基本的なことはできます
-                      </div>
-                    </div>
-              </ReactModal>
+              <SkillModal selectedItem={selectedItem} lang="Git" setSelectedItem={setSelectedItem} >
+                <SkillCard langName="Git" years="2年" star="3.5" remark="基本的なことはできます"/>
+              </SkillModal>
             </div>
             <div className='midashi'><span>クラウドプラットフォーム</span></div>
             <div className='skills'>
-              <button className="btn" onClick={() => onOpenDialog("firebase")}>
-              <IconWithLang langName="Firebase"/>
+              <button className="btn" onClick={() => onOpenDialog("Firebase")}>
+                <IconWithLang langName="Firebase"/>
               </button>
-              <ReactModal
-                  isOpen={selectedItem === "firebase"}
-                  onRequestClose={() => setSelectedItem('')}
-                  overlayClassName={{
-                    base: "overlay-base",
-                    afterOpen: "overlay-after",
-                    beforeClose: "overlay-before"
-                  }}
-                  className={{
-                    base: "content-base",
-                    afterOpen: "content-after",
-                    beforeClose: "content-before"
-                  }}
-                  closeTimeoutMS={400}
-                  >
-                    <div className='skillcard'>
-                      <div className='skillpic'>
-                        <IconWithLang langName="Firebase"/>
-                      </div>
-                      <div className='skillde'>
-                        <div className='skillfont'>経験年数</div>
-                        一か月
-                        <div className='skillfont'>習熟度</div>
-                        <span className="star5_rating" data-rate="2.5"></span>
-                        <div className='skillfont'>備考</div>
-                        インターンの開発にて使用しました
-                      </div>
-                    </div>
-              </ReactModal>
+              <SkillModal selectedItem={selectedItem} lang="Firebase" setSelectedItem={setSelectedItem} >
+                <SkillCard langName="Firebase" years="一か月" star="2.5" remark="インターンの開発にて使用しました"/>
+              </SkillModal>
             </div>
         </div>
       </div>
