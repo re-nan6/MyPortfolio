@@ -13,6 +13,8 @@ import PageLink from './components/pageLink';
 import WorkCard from './components/workCard';
 import SkillModal from './components/skillModal';
 import SkillCard from './components/skillCard';
+import WorkDetail from './components/workDetail';
+import WorkModal from './components/workModal';
 
 function App() {
   const [selectedItem, setSelectedItem] = useState<string>('')
@@ -229,37 +231,9 @@ function App() {
             <button className='workbtn' onClick={() => onOpenDialog("portfolio")}>
               <WorkCard imgname='portfoliopage.png'/>
             </button>
-            <ReactModal
-              isOpen={selectedItem === "portfolio"}
-              onRequestClose={() => setSelectedItem('')}
-              overlayClassName={{
-                base: "overlay-base",
-                afterOpen: "overlay-after",
-                beforeClose: "overlay-before"
-              }}
-              className={{
-                base: "content-work-base",
-                afterOpen: "content-work-after",
-                beforeClose: "content-work-before"
-              }}
-              closeTimeoutMS={400}
-              >
-                <div className='skillcard'>
-                  <div className='workpic'>
-                    <img src={`${process.env.PUBLIC_URL}/portfoliopage.png`} alt="Logo" className="workimg"/>
-                  </div>
-                  <div className='workde'>
-                    <div className='skillfont'>URL</div>
-                    1年
-                    <div className='skillfont'>ソースコード</div>
-                    <span className="star5_rating" data-rate="4"></span>
-                    <div className='skillfont'>備考</div>
-                    ドキュメントを参照すれば大抵のことは出来ます
-                    <div className='skillfont'>使用技術</div>
-                    ドキュメントを参照すれば大抵のことは出来ます
-                  </div>
-                </div>
-            </ReactModal>
+            <WorkModal selectedItem={selectedItem} work="portfolio" setSelectedItem={setSelectedItem}>
+              <WorkDetail link={`${process.env.PUBLIC_URL}/portfoliopage.png`} years="1年" star="4" remark="ドキュメントを参照すれば大抵のことは出来ます" skills=""/>
+            </WorkModal>
           </div>
           <div style={{textAlign:"center"}}>ポートフォリオ</div>
         </div>
