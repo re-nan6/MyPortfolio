@@ -1,6 +1,9 @@
 import React from 'react'
 import styles from './workCard.module.scss';
 
+//Workを表示するカード
+//@param imgname - 表示する画像の名前
+//@return 画像のカードが表示される
 type Props = {
   imgname: string
 }
