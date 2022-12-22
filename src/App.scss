@@ -1,28 +1,14 @@
-.awardbox {
+.award_box {
   width: 800px;
   height: 300px;
   margin: 0 auto;
 }
 
-.awardpage {
+.award_page {
   display: flex;
 }
 
-.btn {
-  margin: 29px;
-  border: #000000 solid 2px;
-  border-radius: 5px;
-  background-color: #ffffff;
-  color: #000000;
-  &:hover{
-    transform: translateY(5px);
-    border-bottom: none;
-    border: #000000 solid 2px;
-    cursor: pointer;
-  }
-}
-
-.contents_bg {
+.contents_background {
   height: 500px;
   background-image: url(images/pc1.jpg);
   background-size: cover;
@@ -35,18 +21,18 @@
   background-color: rgba(0,0,0,0.6);
 }
 
-.contents_de {
+.contents_detail {
   color: white;
   text-align: center;
 }
 
-.circleIcon {
-  display: inline-block;          /* 複数の画像を横に並べたい場合 */
-  width:  180px;       /* ※縦横を同値に */
+.circle_icon {
+  display: inline-block;
+  width:  180px;
   height: 180px;
-  border: 9px solid black;      /* ※縦横を同値に */
-  border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
-  background-position: left top;  /* 横長画像の左上を基準に表示 */
+  border: 9px solid black;
+  border-radius: 50%;
+  background-position: left top;
 }
 
 .footer {
@@ -56,10 +42,10 @@
   text-align: center;
 }
 
-.footerbox {
-  height:40px;	/*高さは必須*/
-  margin:auto 0;	/*上下をautoにします*/
-	position: absolute;	/*top,bottomが0の時左右の中央揃えになります*/
+.footer_box {
+  height:40px;
+  margin:auto 0;
+	position: absolute;
 	top:0;
 	bottom:0;
   left:0;
@@ -68,18 +54,14 @@
   font-size: 15px;
 }
 
-.is_modal {
-  overflow: hidden;
-}
-
-.midashi {
+.headline {
   margin-top: 40px;
   margin-bottom: 20px;
   border-bottom: 3px solid #000;
   font-size: 30px;
 }
 
-.profilebox {
+.profile_box {
   display: flex;
   width: 900px;
   height: 375px;
@@ -99,10 +81,24 @@
   flex-wrap: wrap;
 }
 
-.skillbox{
+.skill_box{
   display: block;
   width: 900px;
   margin: 0 auto;
+}
+
+.skill_button {
+  margin: 29px;
+  border: #000000 solid 2px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #000000;
+  &:hover{
+    transform: translateY(5px);
+    border-bottom: none;
+    border: #000000 solid 2px;
+    cursor: pointer;
+  }
 }
 
 .title {
@@ -113,7 +109,7 @@
   text-align: center;
 }
 
-.worksbox {
+.works_box {
   display: flex;
   justify-content: center;
   width: 900px;
@@ -121,7 +117,7 @@
   margin: 0 auto;
 }
 
-.workbtn {
+.work_button {
   margin: 30px;
   border: none;
   background: transparent;
@@ -130,17 +126,4 @@
     transform: scale(1.1);
     cursor: pointer;
   }
-}
-
-.workpic {
-  width: 600px;
-}
-
-.workde {
-  width: 400px;
-}
-
-.workimg {
-  width: 500px;
-  height: 270px;
 }

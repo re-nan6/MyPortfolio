@@ -2,19 +2,19 @@
   position: relative;
   margin: 2em auto;
   padding: 15px 35px 15px 25px;
-  width: 400px; /* ボックス幅 */
+  width: 400px;
   height: 50px;
-  background-color: #fff; /* ボックス背景色 */
-  color: #555555; /* 文章色 */
-  border: 1px solid #ccc; /* 枠線 */
-  box-shadow: 1px 1px 1px #acacac; /* 影の色 */
+  background-color: #fff;
+  color: #555555;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #acacac;
   &::after{
     position: absolute;
     content: '';
     top: 0px;
     width: 10px;
     right: 20px;
-    border: solid 5px #fff; /*背景色と同じ色にする*/
+    border: solid 5px #fff;
     z-index: 2;
   }
   &::before{
@@ -24,7 +24,7 @@
     right: 10px;
     height: 55px;
     width: 15px;
-    border: 3px solid #555555; /*クリップ色 */
+    border: 3px solid #555555;
     background-color: none;
     border-radius: 12px;
     box-shadow: 1px 1px 2px #999;

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import styles from './skillCard.module.scss';
 import IconWithLang from './iconWithLang';
 
@@ -10,24 +10,24 @@ import IconWithLang from './iconWithLang';
 //@return スキルの詳細が書かれたカードが表示される
 
 type Props = {
-  langName:string,
-  years:string,
-  star:string,
-  remark:string,
+  langName:string;
+  years:string;
+  star:string;
+  remark:string;
 }
 
 const SkillCard: React.FC<Props> = ({langName,years,star,remark}) => {
   return (
-        <div className={styles.skillcard}>
-          <div className={styles.skillpic}>
+        <div className={styles.skill_card}>
+          <div className={styles.skill_pic}>
             <IconWithLang langName={langName}/>
           </div>
-          <div className={styles.skillde}>
-            <div className={styles.skillfont}>経験年数</div>
+          <div className={styles.skill_detail}>
+            <div className={styles.skill_font}>経験年数</div>
             {years}
-            <div className={styles.skillfont}>習熟度</div>
+            <div className={styles.skill_font}>習熟度</div>
             <span className={styles.star5_rating} data-rate={star}></span>
-            <div className={styles.skillfont}>備考</div>
+            <div className={styles.skill_font}>備考</div>
             {remark}
           </div>
         </div>

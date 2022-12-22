@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { Modal } from '@mantine/core';
 
 //スキルの詳細を表示するためのモーダルウィンドウ
@@ -7,11 +7,12 @@ import { Modal } from '@mantine/core';
 //@param setSelectedItem - 選択したスキルを変更するuseState
 //@param children - 表示するスキルの詳細
 //@return スキルの詳細が書かれたモーダルウィンドウ
+
 type Props = {
-  selectedItem:string
-  lang:string
-  setSelectedItem:React.Dispatch<React.SetStateAction<string>>
-  children:React.ReactNode
+  selectedItem:string;
+  lang:string;
+  setSelectedItem:React.Dispatch<React.SetStateAction<string>>;
+  children:React.ReactNode;
 }
 
 const SkillModal: React.FC<Props> = ({selectedItem,lang,setSelectedItem,children}) => {

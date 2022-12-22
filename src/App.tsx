@@ -5,7 +5,7 @@ import {FaUser, FaAward} from "react-icons/fa";
 import {GiCardboardBoxClosed} from 'react-icons/gi';
 import {IoIosMail} from 'react-icons/io';
 import AwardFlame from './components/awardFlame';
-import IconWithName from './components/iconWithName';
+import PageScroll from './components/pageScroll';
 import IconWithLang from './components/iconWithLang';
 import MailFlame from './components/mailFlame';
 import PageLink from './components/pageLink';
@@ -23,18 +23,18 @@ function App() {
 
   return (
     <div>
-      <div className='contents_bg'>
+      <div className='contents_background'>
         <div className='contents'>
-          <div className='contents_de'>
+          <div className='contents_detail'>
             <div className='title'>
               Yodai Tanaka's Portfolio
             </div>
             <div>
-              <IconWithName refs="Profile"/>
-              <IconWithName refs="Skills"/>
-              <IconWithName refs="Works"/>
-              <IconWithName refs="Award"/>
-              <IconWithName refs="Contact"/>
+              <PageScroll refs="Profile"/>
+              <PageScroll refs="Skills"/>
+              <PageScroll refs="Works"/>
+              <PageScroll refs="Award"/>
+              <PageScroll refs="Contact"/>
             </div>
           </div>
         </div>
@@ -45,9 +45,9 @@ function App() {
         </div>
       </div>
       <div>
-        <div className='profilebox'>
+        <div className='profile_box'>
           <div style={{margin:"10px"}}>
-            <img className='circleIcon' src={`${process.env.PUBLIC_URL}/profileIcon.jpg`} alt="Logo" />
+            <img className='circle_icon' src={`${process.env.PUBLIC_URL}/profileIcon.jpg`} alt="Icon" />
           </div>
           <div style={{marginLeft:"50px"}}>
             <div>
@@ -112,107 +112,107 @@ function App() {
       </div>
       <div id="Skills" className='section' style={{marginTop:"100px"}}>
         <AiFillCode style={{position:"relative", top:"15px",right:"10px"}}size={70} color={`black`}/>SKILLS
-        <div className='skillbox'>
-          <div className='midashi'><span>プログラミング言語</span></div>
+        <div className='skill_box'>
+          <div className='headline'><span>プログラミング言語</span></div>
           <div className='skills'>
-            <button className="btn" onClick={() => onOpenDialog("HTML")}>
+            <button className="skill_button" onClick={() => onOpenDialog("HTML")}>
               <IconWithLang langName="HTML"/>
             </button>
             <SkillModal selectedItem={selectedItem} lang="HTML" setSelectedItem={setSelectedItem} >
               <SkillCard langName="HTML" years="1年" star="4" remark="ドキュメントを参照すれば大抵のことは出来ます"/>
             </SkillModal>
 
-            <button className="btn" onClick={() => onOpenDialog("CSS")}>
+            <button className="skill_button" onClick={() => onOpenDialog("CSS")}>
               <IconWithLang langName="CSS"/>
             </button>
             <SkillModal selectedItem={selectedItem} lang="CSS" setSelectedItem={setSelectedItem} >
               <SkillCard langName="CSS" years="1年" star="4" remark="ドキュメントを参照すれば大抵のことは出来ます"/>
             </SkillModal>
 
-            <button className="btn" onClick={() => onOpenDialog("JavaScript")}>
+            <button className="skill_button" onClick={() => onOpenDialog("JavaScript")}>
               <IconWithLang langName="JavaScript"/>
             </button>
             <SkillModal selectedItem={selectedItem} lang="JavaScript" setSelectedItem={setSelectedItem} >
               <SkillCard langName="JavaScript" years="1年" star="4" remark="インターンでの開発や卒業研究の際に使用しました"/>
             </SkillModal>
 
-            <button className="btn" onClick={() => onOpenDialog("TypeScript")}>
+            <button className="skill_button" onClick={() => onOpenDialog("TypeScript")}>
               <IconWithLang langName="TypeScript"/>
             </button>
             <SkillModal selectedItem={selectedItem} lang="TypeScript" setSelectedItem={setSelectedItem} >
               <SkillCard langName="TypeScript" years="半年" star="4" remark="インターンでの開発の際に使用しました。このサイトでも使用しています"/>
             </SkillModal>
 
-            <button className="btn" onClick={() => onOpenDialog("Java")}>
+            <button className="skill_button" onClick={() => onOpenDialog("Java")}>
               <IconWithLang langName="Java"/>
             </button>
             <SkillModal selectedItem={selectedItem} lang="Java" setSelectedItem={setSelectedItem} >
               <SkillCard langName="Java" years="2年" star="2" remark="大学の授業にてチャットシステムの開発を行いました"/>
             </SkillModal>
 
-            <button className="btn" onClick={() => onOpenDialog("PHP")}>
+            <button className="skill_button" onClick={() => onOpenDialog("PHP")}>
               <IconWithLang langName="PHP"/>
             </button>
             <SkillModal selectedItem={selectedItem} lang="PHP" setSelectedItem={setSelectedItem} >
               <SkillCard langName="PHP" years="1年" star="2" remark="大学の授業にてショッピングサイトの開発を行いました"/>
             </SkillModal>
 
-            <button className="btn" onClick={() => onOpenDialog("Python")}>
+            <button className="skill_button" onClick={() => onOpenDialog("Python")}>
               <IconWithLang langName="Python"/>
             </button>
             <SkillModal selectedItem={selectedItem} lang="Python" setSelectedItem={setSelectedItem} >
               <SkillCard langName="Python" years="5年" star="4.5" remark="卒業研究やKaggleにてデータ分析・機械学習を行っていました。AtCoder等の競技プログラミングでも使用しています"/>
             </SkillModal>
             </div>
-            <div className='midashi'><span>フレームワーク</span></div>
+            <div className='headline'><span>フレームワーク</span></div>
             <div className='skills'>
-              <button className="btn" onClick={() => onOpenDialog("React")}>
+              <button className="skill_button" onClick={() => onOpenDialog("React")}>
               <IconWithLang langName="React"/>
               </button>
               <SkillModal selectedItem={selectedItem} lang="React" setSelectedItem={setSelectedItem} >
                 <SkillCard langName="React" years="半年" star="3" remark="インターンでの開発の際に使用しました。このサイトでもReactを使用しています"/>
               </SkillModal>
 
-              <button className="btn" onClick={() => onOpenDialog("Vue")}>
+              <button className="skill_button" onClick={() => onOpenDialog("Vue")}>
               <IconWithLang langName="Vue"/>
               </button>
               <SkillModal selectedItem={selectedItem} lang="Vue" setSelectedItem={setSelectedItem} >
                 <SkillCard langName="Vue" years="半年" star="3" remark="インターンでの開発の際に使用しました"/>
               </SkillModal>
 
-              <button className="btn" onClick={() => onOpenDialog("jQuery")}>
+              <button className="skill_button" onClick={() => onOpenDialog("jQuery")}>
                 <IconWithLang langName="jQuery"/>
               </button>
               <SkillModal selectedItem={selectedItem} lang="jQuery" setSelectedItem={setSelectedItem} >
                 <SkillCard langName="jQuery" years="半年" star="3" remark="インターンでの開発の際に使用しました"/>
               </SkillModal>
 
-              <button className="btn" onClick={() => onOpenDialog("Flask")}>
+              <button className="skill_button" onClick={() => onOpenDialog("Flask")}>
                 <IconWithLang langName="Flask"/>
               </button>
               <SkillModal selectedItem={selectedItem} lang="Flask" setSelectedItem={setSelectedItem} >
                 <SkillCard langName="Flask" years="2か月" star="3" remark="大学の授業にてレコメンドサービスの開発を行いました"/>
               </SkillModal>
 
-              <button className="btn" onClick={() => onOpenDialog("FastAPI")}>
+              <button className="skill_button" onClick={() => onOpenDialog("FastAPI")}>
                 <IconWithLang langName="FastAPI"/>
               </button>
               <SkillModal selectedItem={selectedItem} lang="FastAPI" setSelectedItem={setSelectedItem} >
                 <SkillCard langName="FastAPI" years="2か月" star="3" remark="趣味でレコメンドサービスの開発を行いました"/>
               </SkillModal>
             </div>
-            <div className='midashi'><span>開発支援ツール</span></div>
+            <div className='headline'><span>開発支援ツール</span></div>
             <div className='skills'>
-              <button className="btn" onClick={() => onOpenDialog("Git")}>
+              <button className="skill_button" onClick={() => onOpenDialog("Git")}>
                 <IconWithLang langName="Git"/>
               </button>
               <SkillModal selectedItem={selectedItem} lang="Git" setSelectedItem={setSelectedItem} >
                 <SkillCard langName="Git" years="2年" star="3.5" remark="基本的なことはできます"/>
               </SkillModal>
             </div>
-            <div className='midashi'><span>クラウドプラットフォーム</span></div>
+            <div className='headline'><span>クラウドプラットフォーム</span></div>
             <div className='skills'>
-              <button className="btn" onClick={() => onOpenDialog("Firebase")}>
+              <button className="skill_button" onClick={() => onOpenDialog("Firebase")}>
                 <IconWithLang langName="Firebase"/>
               </button>
               <SkillModal selectedItem={selectedItem} lang="Firebase" setSelectedItem={setSelectedItem} >
@@ -224,11 +224,11 @@ function App() {
       <div id="Works" className='section' style={{marginTop:"100px"}}>
         <GiCardboardBoxClosed style={{position:"relative", top:"15px",right:"10px"}}size={70} color={`black`}/>WORKS
       </div>
-      <div className='worksbox'>
+      <div className='works_box'>
         <div style={{margin:"10px"}}>
           <div>
-            <button className='workbtn' onClick={() => onOpenDialog("portfolio")}>
-              <WorkCard imgname='portfoliopage.png'/>
+            <button className='work_button' onClick={() => onOpenDialog("portfolio")}>
+              <WorkCard imageName='portfoliopage.png'/>
             </button>
             <WorkModal selectedItem={selectedItem} work="portfolio" setSelectedItem={setSelectedItem} title="ポートフォリオサイト">
               <WorkDetail link={`${process.env.PUBLIC_URL}/portfoliopage.png`} siteUrl="1年" githubUrl='https://github.com/re-nan6/MyPortfolio' remark="ドキュメントを参照すれば大抵のことは出来ます" skills={["TypeScript","React","Git"]}/>
@@ -237,17 +237,17 @@ function App() {
           <div style={{textAlign:"center"}}>ポートフォリオ</div>
         </div>
         <div style={{margin:"10px"}}>
-          <button className='workbtn'>
-            <WorkCard imgname='comingsoon.jpeg'/>
+          <button className='work_button'>
+            <WorkCard imageName='comingsoon.jpeg'/>
           </button>
         </div>
       </div>
       <div id="Award" className='section' style={{marginTop:"100px"}}>
         <FaAward style={{position:"relative", top:"15px",right:"10px"}}size={70} color={`black`}/>AWARD
       </div>
-      <div className='awardbox'>
+      <div className='award_box'>
         <AwardFlame>
-          <div className='awardpage'>
+          <div className='award_page'>
             <div style={{width:"100px",textAlign:"center"}}>
               <AiFillCrown size={70} color={`black`}/>
             </div>
@@ -290,7 +290,7 @@ function App() {
         </div>
       </div>
       <div className='footer'>
-        <div className='footerbox'>
+        <div className='footer_box'>
           <div>
             <div>
               Yodai Tanaka's Portfolio

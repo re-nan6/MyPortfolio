@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 import { Modal } from '@mantine/core';
 
 type Props = {
-  selectedItem:string
-  work:string
-  setSelectedItem:React.Dispatch<React.SetStateAction<string>>
-  title:string
-  children:React.ReactNode
+  selectedItem:string;
+  work:string;
+  setSelectedItem:React.Dispatch<React.SetStateAction<string>>;
+  title:string;
+  children:React.ReactNode;
 }
 
 const WorkModal: React.FC<Props> = ({selectedItem,work,setSelectedItem,title,children}) => {

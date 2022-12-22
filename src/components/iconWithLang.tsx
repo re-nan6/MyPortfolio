@@ -1,16 +1,16 @@
-import React from 'react'
+import React from 'react';
 import styles from './iconWithLang.module.scss';
-import {FaGitAlt} from "react-icons/fa"
+import {FaGitAlt} from "react-icons/fa";
 import {IoLogoHtml5, IoLogoCss3} from "react-icons/io";
-import {IoLogoVue, IoLogoPython} from "react-icons/io5"
-import {SiJavascript, SiTypescript, SiReact, SiJquery, SiJava, SiPhp, SiFirebase, SiFlask, SiFastapi} from "react-icons/si"
+import {IoLogoVue, IoLogoPython} from "react-icons/io5";
+import {SiJavascript, SiTypescript, SiReact, SiJquery, SiJava, SiPhp, SiFirebase, SiFlask, SiFastapi} from "react-icons/si";
 
 //言語のアイコンと言語名を表示するカード
 //@param langName - 表示する言語名
 //@return 言語のアイコンと言語名が表示される
 
 type Props = {
-    langName:string
+    langName:string;
 }
 
 const IconWithLang: React.FC<Props> = ({langName}) => {

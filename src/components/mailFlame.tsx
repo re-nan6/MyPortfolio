@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import styles from './mailFlame.module.scss';
 
 //連絡先の書いてあるカード
@@ -6,7 +6,7 @@ import styles from './mailFlame.module.scss';
 //@return 連絡先の書いてあるカードを表示する
 
 type Props = {
-  children:React.ReactNode,
+  children:React.ReactNode;
 }
 
 const MailFlame: React.FC<Props> = ({children}) => {
