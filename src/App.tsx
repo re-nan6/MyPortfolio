@@ -1,31 +1,31 @@
 import './App.scss';
 import {useState} from "react";
-import {FaUser, FaAward} from "react-icons/fa"
-import {AiFillCrown, AiFillCode} from 'react-icons/ai'
-import {IoIosMail} from 'react-icons/io'
-import {GiCardboardBoxClosed} from 'react-icons/gi'
+import {AiFillCrown, AiFillCode} from 'react-icons/ai';
+import {FaUser, FaAward} from "react-icons/fa";
+import {GiCardboardBoxClosed} from 'react-icons/gi';
+import {IoIosMail} from 'react-icons/io';
 import AwardFlame from './components/awardFlame';
 import IconWithName from './components/iconWithName';
 import IconWithLang from './components/iconWithLang';
 import MailFlame from './components/mailFlame';
 import PageLink from './components/pageLink';
-import WorkCard from './components/workCard';
-import SkillModal from './components/skillModal';
 import SkillCard from './components/skillCard';
+import SkillModal from './components/skillModal';
+import WorkCard from './components/workCard';
 import WorkDetail from './components/workDetail';
 import WorkModal from './components/workModal';
 
 function App() {
   const [selectedItem, setSelectedItem] = useState<string>('')
   const onOpenDialog = (name: string) => {
-    setSelectedItem(name)
+    setSelectedItem(name);
   }
 
   return (
     <div>
-      <div className='contents-bg'>
+      <div className='contents_bg'>
         <div className='contents'>
-          <div className='contents-de'>
+          <div className='contents_de'>
             <div className='title'>
               Yodai Tanaka's Portfolio
             </div>

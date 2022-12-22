@@ -6,6 +6,10 @@ import {FaUser, FaAward} from "react-icons/fa"
 import {GiCardboardBoxClosed} from 'react-icons/gi'
 import {IoIosMail} from 'react-icons/io'
 
+//クリックすると特定の場所に飛ぶボタン
+//@param refs - 遷移先の設定
+//@return アイコンと名前が書かれたボタンが表示される
+
 type Props = {
   refs:string
 }

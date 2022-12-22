@@ -2,6 +2,11 @@ import React from 'react'
 import styles from './pageLink.module.scss';
 import {FiExternalLink} from 'react-icons/fi'
 
+//他ページへ遷移するためのリンク付きテキスト
+//@param children - リンクのタイトル・文章
+//@param link - 遷移先のリンク
+//@return ホバーすると色の変わるリンク付きテキストが表示される
+
 type Props = {
   children:React.ReactNode,
   link:string,

@@ -22,7 +22,7 @@
   }
 }
 
-.contents-bg {
+.contents_bg {
   height: 500px;
   background-image: url(images/pc1.jpg);
   background-size: cover;
@@ -35,41 +35,9 @@
   background-color: rgba(0,0,0,0.6);
 }
 
-.contents-de {
+.contents_de {
   color: white;
   text-align: center;
-}
-
-.content-work-base {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top: auto;
-  left: auto;
-  right: auto;
-  bottom: auto;
-  margin: 0 auto;
-  border: 0;
-  outline: 0;
-  height: 0%;
-  width: 0%;
-  background-color: transparent;
-  transition-property: background-color, width, height;
-  transition-duration: 400ms;
-  transition-timing-function: ease-in-out;
-}
-
-.content-work-after {
-  width: 1150px;
-  height: 600px;
-  background-color: white;
-}
-
-.content-work-before {
-  width: 600px;
-  height: 300px;
-  background-color: transparent;
 }
 
 .circleIcon {
