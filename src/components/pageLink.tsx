@@ -9,13 +9,15 @@ type Props = {
 
 const PageLink: React.FC<Props> = ({children,link}) => {
   return (
-    <div style={{display:"flex"}}>
-    <div>
-      <FiExternalLink style={{position:"relative", top:"17px",right:"3px"}}size={15} color={`black`}/>
-    </div>
-    <p className={styles.linkde}>
-      <a href={link} target="_blank" rel="noopener noreferrer">{children}</a>
-    </p>
+    <div style={{display:"inline-block"}}>
+      <div style={{display:"flex"}}>
+        <div>
+          <FiExternalLink style={{position:"relative", top:"17px",right:"3px"}}size={15} color={`black`}/>
+        </div>
+        <p className={styles.linkde}>
+          <a href={link} target="_blank" rel="noopener noreferrer">{children}</a>
+        </p>
+      </div>
     </div>
   );
 };

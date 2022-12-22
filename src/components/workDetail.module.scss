@@ -1,3 +1,15 @@
+.remark{
+  margin:10px 0
+}
+
+.skillcard{
+  text-align: center;
+}
+
+.skillfont {
+  font-weight: 800;
+}
+
 .star5_rating{
   display: inline-block;
   position: relative;
@@ -34,7 +46,7 @@
 .star5_rating[data-rate="0"]:after{ width: 0%; } /* 星0 */
 
 .workpic {
-  width: 600px;
+  width: 400px;
 }
 
 .workde {
@@ -42,6 +54,7 @@
 }
 
 .workimg {
-  width: 500px;
-  height: 270px;
+  width: 400px;
+  height: 250px;
+  border: 1px solid black;
 }

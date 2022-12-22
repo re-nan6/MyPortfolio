@@ -1,6 +1,5 @@
 import React from 'react'
-import styles from './skillModal.module.scss';
-import ReactModal from 'react-modal';
+import { Modal } from '@mantine/core';
 
 type Props = {
   selectedItem:string
@@ -12,23 +11,12 @@ type Props = {
 const SkillModal: React.FC<Props> = ({selectedItem,lang,setSelectedItem,children}) => {
   return (
     <div>
-      <ReactModal
-        isOpen={selectedItem === lang}
-        onRequestClose={() => setSelectedItem('')}
-        overlayClassName={{
-          base: styles.overlay_base,
-          afterOpen: styles.overlay_after,
-          beforeClose: styles.overlay_before
-        }}
-        className={{
-          base: styles.content_base,
-          afterOpen: styles.content_after,
-          beforeClose: styles.content_before
-        }}
-        closeTimeoutMS={400}
-        >
+      <Modal
+        opened={selectedItem === lang}
+        onClose={() => setSelectedItem('')}
+      >
         {children}
-      </ReactModal>
+      </Modal>
     </div>
   );
 };

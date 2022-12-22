@@ -4,7 +4,6 @@ import {FaUser, FaAward} from "react-icons/fa"
 import {AiFillCrown, AiFillCode} from 'react-icons/ai'
 import {IoIosMail} from 'react-icons/io'
 import {GiCardboardBoxClosed} from 'react-icons/gi'
-import ReactModal from 'react-modal';
 import AwardFlame from './components/awardFlame';
 import IconWithName from './components/iconWithName';
 import IconWithLang from './components/iconWithLang';
@@ -231,8 +230,8 @@ function App() {
             <button className='workbtn' onClick={() => onOpenDialog("portfolio")}>
               <WorkCard imgname='portfoliopage.png'/>
             </button>
-            <WorkModal selectedItem={selectedItem} work="portfolio" setSelectedItem={setSelectedItem}>
-              <WorkDetail link={`${process.env.PUBLIC_URL}/portfoliopage.png`} years="1年" star="4" remark="ドキュメントを参照すれば大抵のことは出来ます" skills=""/>
+            <WorkModal selectedItem={selectedItem} work="portfolio" setSelectedItem={setSelectedItem} title="ポートフォリオサイト">
+              <WorkDetail link={`${process.env.PUBLIC_URL}/portfoliopage.png`} siteUrl="1年" githubUrl='https://github.com/re-nan6/MyPortfolio' remark="ドキュメントを参照すれば大抵のことは出来ます" skills={["TypeScript","React","Git"]}/>
             </WorkModal>
           </div>
           <div style={{textAlign:"center"}}>ポートフォリオ</div>
