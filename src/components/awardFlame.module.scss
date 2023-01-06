@@ -1,6 +1,6 @@
 .flame{
   width: 800px;
-  height: 200px;
+  height: 270px;
   display: block;
   margin-top: 50px;
   position: relative;
@@ -9,14 +9,14 @@
   border: dashed 2px white;
   padding: 0.2em 0.5em;
   color: #454545;
-}
-.flame:after{
-  position: absolute;
-  content: '';
-  right: -7px;
-  top: -7px;
-  border-width: 0 15px 15px 0;
-  border-style: solid;
-  border-color: #ffdb88 #fff #ffdb88;
-  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
+  &:after{
+    position: absolute;
+    content: '';
+    right: -7px;
+    top: -7px;
+    border-width: 0 15px 15px 0;
+    border-style: solid;
+    border-color: #ffdb88 #fff #ffdb88;
+    box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.15);
+  }
 }

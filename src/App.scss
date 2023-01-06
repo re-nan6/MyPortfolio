@@ -1,0 +1,129 @@
+.award_box {
+  width: 800px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.award_page {
+  display: flex;
+}
+
+.contents_background {
+  height: 500px;
+  background-image: url(images/pc1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.contents {
+  height: 120px;
+  padding: 190px 0px;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.contents_detail {
+  color: white;
+  text-align: center;
+}
+
+.circle_icon {
+  display: inline-block;
+  width:  180px;
+  height: 180px;
+  border: 9px solid black;
+  border-radius: 50%;
+  background-position: left top;
+}
+
+.footer {
+  position: relative;
+  height: 100px;
+  background-color: #282c34;
+  text-align: center;
+}
+
+.footer_box {
+  height:40px;
+  margin:auto 0;
+	position: absolute;
+	top:0;
+	bottom:0;
+  left:0;
+	right:0;
+  color:#fff;
+  font-size: 15px;
+}
+
+.headline {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #000;
+  font-size: 30px;
+}
+
+.profile_box {
+  display: flex;
+  width: 900px;
+  height: 375px;
+  margin: 0 auto;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Sawarabi+Gothic');
+.section {
+  font-family: 'Sawarabi Gothic', sans-serif;
+  font-weight: 300;
+  font-size: 60px;
+  text-align: center;
+}
+
+.skills{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill_box{
+  display: block;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.skill_button {
+  margin: 29px;
+  border: #000000 solid 2px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #000000;
+  &:hover{
+    transform: translateY(5px);
+    border-bottom: none;
+    border: #000000 solid 2px;
+    cursor: pointer;
+  }
+}
+
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+}
+
+.works_box {
+  display: flex;
+  justify-content: center;
+  width: 900px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.work_button {
+  margin: 30px;
+  border: none;
+  background: transparent;
+  &:hover{
+    box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
