@@ -209,6 +209,13 @@ function App() {
               <SkillModal selectedItem={selectedItem} lang="Git" setSelectedItem={setSelectedItem} >
                 <SkillCard langName="Git" years="2年" star="3.5" remark="基本的なことはできます"/>
               </SkillModal>
+
+              <button className="skill_button" onClick={() => onOpenDialog("Docker")}>
+                <IconWithLang langName="Docker"/>
+              </button>
+              <SkillModal selectedItem={selectedItem} lang="Docker" setSelectedItem={setSelectedItem} >
+                <SkillCard langName="Docker" years="1ヶ月" star="2" remark="趣味で作成したレコメンドサービスの開発の際に使用しました"/>
+              </SkillModal>
             </div>
             <div className='headline'><span>クラウドプラットフォーム</span></div>
             <div className='skills'>
@@ -226,20 +233,22 @@ function App() {
       </div>
       <div className='works_box'>
         <div style={{margin:"10px"}}>
-          <div>
             <button className='work_button' onClick={() => onOpenDialog("portfolio")}>
               <WorkCard imageName='portfoliopage.png'/>
             </button>
             <WorkModal selectedItem={selectedItem} work="portfolio" setSelectedItem={setSelectedItem} title="ポートフォリオサイト">
-              <WorkDetail link={`${process.env.PUBLIC_URL}/portfoliopage.png`} siteUrl="1年" githubUrl='https://github.com/re-nan6/MyPortfolio' remark="ドキュメントを参照すれば大抵のことは出来ます" skills={["TypeScript","React","Git"]}/>
+              <WorkDetail link={`${process.env.PUBLIC_URL}/portfoliopage.png`} siteUrl="1年" githubUrl='https://github.com/re-nan6/MyPortfolio' remark="私自身の紹介をするためのポートフォリオサイトです" skills={["TypeScript","React","Git"]}/>
             </WorkModal>
-          </div>
           <div style={{textAlign:"center"}}>ポートフォリオ</div>
         </div>
         <div style={{margin:"10px"}}>
-          <button className='work_button'>
-            <WorkCard imageName='comingsoon.jpeg'/>
+          <button className='work_button' onClick={() => onOpenDialog("recoani")}>
+                <WorkCard imageName='RecoAni.png'/>
           </button>
+          <WorkModal selectedItem={selectedItem} work="recoani" setSelectedItem={setSelectedItem} title="RecoAni">
+            <WorkDetail link={`${process.env.PUBLIC_URL}/RecoAni.png`} siteUrl="https://reco-ani.vercel.app/" githubUrl='https://github.com/re-nan6/RecoAni' remark="Annictユーザーのアニメ評価を元にアニメのレコメンドを行うサイトです。友人と2人で作成しました。" skills={["TypeScript","React","Python","FastAPI","Git","Docker"]}/>
+          </WorkModal>
+          <div style={{textAlign:"center"}}>RecoAni</div>
         </div>
       </div>
       <div id="Award" className='section' style={{marginTop:"100px"}}>
@@ -296,7 +305,7 @@ function App() {
               Yodai Tanaka's Portfolio
             </div>
             <div>
-              Last updated Oct 7, 2022
+              Last updated Jan 6, 2022
             </div>
           </div>
         </div>

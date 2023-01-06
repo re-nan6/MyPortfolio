@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './iconWithLang.module.scss';
-import {FaGitAlt} from "react-icons/fa";
+import {FaGitAlt, FaDocker} from "react-icons/fa";
 import {IoLogoHtml5, IoLogoCss3} from "react-icons/io";
 import {IoLogoVue, IoLogoPython} from "react-icons/io5";
 import {SiJavascript, SiTypescript, SiReact, SiJquery, SiJava, SiPhp, SiFirebase, SiFlask, SiFastapi} from "react-icons/si";
@@ -30,6 +30,7 @@ const IconWithLang: React.FC<Props> = ({langName}) => {
         { langName==="Java" && <SiJava size={130} color={'#ccc'} />}
         { langName==="PHP" && <SiPhp size={130} color={'#ccc'} />}
         { langName==="Git" && <FaGitAlt size={130} color={'#ccc'} />}
+        { langName==="Docker" && <FaDocker size={130} color={'#ccc'} />}
         { langName==="Firebase" && <SiFirebase size={130} color={'#ccc'} />}
         <div className={styles.text}>
             {langName}

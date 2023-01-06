@@ -3,7 +3,7 @@ import styles from './iconOnly.module.scss';
 import {IoLogoHtml5, IoLogoCss3} from "react-icons/io";
 import {IoLogoVue, IoLogoPython} from "react-icons/io5";
 import {SiJavascript, SiTypescript, SiReact, SiJquery, SiJava, SiPhp, SiFirebase, SiFlask, SiFastapi} from "react-icons/si";
-import {FaGitAlt} from "react-icons/fa";
+import {FaGitAlt, FaDocker} from "react-icons/fa";
 import { ActionIcon, Tooltip } from '@mantine/core';
 
 //アイコン単体を表示するためのコンポーネント
@@ -38,6 +38,7 @@ const IconOnly: React.FC<Props> = ({langName}) => {
           { langName==="Java" && <SiJava size={26}/>}
           { langName==="PHP" && <SiPhp size={26}/>}
           { langName==="Git" && <FaGitAlt size={26}/>}
+          { langName==="Docker" && <FaDocker size={26}/>}
           { langName==="Firebase" && <SiFirebase size={26}/>}
         </ActionIcon>
       </Tooltip>
